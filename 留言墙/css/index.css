@@ -1,0 +1,83 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+#nav img
+{
+    float: left;
+    width:130px;
+    height:80px;
+}
+/*一级菜单样式*/
+#nav {
+    /* width: 1000px; */
+    position: fixed;
+    width:100%;
+    /* 设置固定定位 */
+    height:80px;
+    margin: 0px auto;
+    background:deepskyblue;
+    font-size: 18px;
+    font-family: 微软雅黑;
+}
+
+    #nav ul li {
+        margin-top: 20px;
+        margin-left:60px;
+        float: left;
+        /*包含块*/
+        position:relative;
+    }
+
+        #nav ul li a {
+            margin-left:30px;
+            display: block;
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+        }
+
+            #nav ul li a:hover {
+                color: #ffd800;
+                background:deepskyblue;
+            }
+/*二级菜单样式*/
+        #nav ul li ul {
+        position:absolute;
+        top:40px;
+        left:0px;
+        display:none;
+        }
+            #nav ul li ul li {
+            float:none;
+            }
+            #nav ul li ul li a{
+                margin-left:-20px;
+                background:deepskyblue;
+                border-top:1px solid #ccc;
+                border-radius: 10px;
+        }
+            /*一级菜单悬停时二级菜单可见*/
+        #nav ul li:hover ul {
+            display:block;
+}
+body
+{
+    background-image: url(../image/4.webp);
+    background-repeat:no-repeat;
+    background-position:fixed;
+    top: 30px;
+    background-size:130%;
+    /* height:1000px; */
+}

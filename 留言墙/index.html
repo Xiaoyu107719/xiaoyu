@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/dy.css">
+    <link rel="stylesheet" type="text/css" href="css/lunbo.css">
+    <!-- 通过js实现的点击轮播效果 -->
+    <title>Hello World</title>
+</head>
+<body>
+    <div id="nav">
+        <div class="mg"><p id="mess">&lt;</p></div>
+        <!-- <div class="mgs"><p id="mess">&gt;</p></div> -->
+        <!-- 轮播图切换图片注意图片格式,路径以及样式大小! -->
+        <img src="./image/2.webp" id="img_c">
+        <ul>
+            <li><a href="">网站首页</a>
+                <ul>
+                    <li><a href="log_in.html">账号登录/账号注册</a></li>
+                    <li><a href="">网站更新</a></li>
+                    <li><a href="wangzhanliuyan.html">相关介绍</a></li>
+                </ul>
+            </li>
+            <li><a href="">最新活动</a>
+                <ul>
+                    <li><a href="">7月夺宝活动</a></li>
+                    <li><a href="">预约8月购物节</a></li>
+                    <li><a href="">网络说说</a></li>
+                </ul>
+            </li>
+            <li><a href="">网站反馈</a></li>
+        </ul>
+    <!--查询 -->
+    <div class="select">
+        <form method="POST">
+            <input type="text" value="请输入您的查询请求" id="text_t">
+            <button id="butt">搜索</button>
+        </form>  
+    </div>
+    </div>
+    <div class="list_name">
+        <!-- 壁纸更换 -->
+        <img src="./image/5.webp" id="img_s">
+        
+        <div class="ptn">
+            <span>.</span>
+            <p>最新文章</p>
+        </div>
+        <!-- 定位的内容 -->
+        <div class="list_t">
+            <img src="./image/7.jpg">
+            <p>用户名:</p>
+            <span id="p">一页春秋</span>
+            <input type="text" id="m_stext">
+            <button id="ip_tem">修改网名</button>
+        </div>
+        <div class="lit">
+            <span>我的相册</span>
+            <img src="./image/6.webp">
+            <img src="./image/8.webp" id="m2">
+        </div>
+        <div class="nav_x1" id="nex">
+            <p id="km">取消关注</p>
+            <img src="./image/9.jpg">
+            <span>星河滚烫你是人间理想，皓月清凉你是人间曙光，人海冷漠你是人间炙热，满眼星河你是清风满月,
+                万事浮沉你是人间归途，众生平庸你是人间星光，世事无常你是人间琳琅，你是人间宝藏，把我捧在心上。</span>
+        </div>
+        <div class="nav_x2" id="nex1">
+            <!-- 第二个说说 -->
+            <p id="p3">取消关注</p>
+            <img src="./image/10.jpeg">
+            <span>有一段缘分让我珍惜，有一幕记忆铭刻在心，有一个你让我牵挂。不管远也好，近也好；见面也好，短信也好，愿你幸福就好，早安！</span>
+        </div>
+        <div class="nav_x3" id="nex2">
+            <!-- 第二个说说 -->
+            <p id="p4">取消关注</p>
+            <img src="./image/12.webp">
+            <span>新雪初霁，满月当空，下面平铺皓影，上面流转亮银，而你带笑向我走来，月色和雪色之间，你是第三种绝色。</span>
+        </div>
+        <div class="nav_x4" id="nex3">
+            <!-- 第二个说说 -->
+            <p id="p5">取消关注</p>
+            <img src="./image/13.jpg">
+            <span>每个人都有属于自己的一片森林，也许我们 从来不曾去过，但它一直在那里，总会在那里。迷失的人迷失了，相逢的人会再相逢。</span>
+        </div>
+    </div>
+    <script>
+        var Stye=document.getElementById('mess');
+        var flag=0;
+        Stye.onclick=function()
+        {
+            // 点击时修改样式
+            // var img=document.getElementById('img_c');
+           
+            if(flag==0)
+            {
+                document.getElementById("img_s").src="./image/14.webp";
+                flag=flag+1;
+            }
+            else
+            {
+                document.getElementById("img_s").src="./image/5.webp";
+                flag=0;
+            }
+            // document.getElementById("img_s").src="./image/16.webp";
+            // document.getElementById("img_s").src="./image/17.webp";
+        }
+        
+        var quxiao=document.getElementById('km');
+        var quxia1=document.getElementById('p3');
+        var quxia2=document.getElementById('p4');
+        var quxia3=document.getElementById('p5');
+        //获取取消关注的值
+        quxiao.onclick=function()
+        {
+            //点击注册
+            var nex1=document.getElementById('nex');
+            // console.log(nex);
+            nex1.style.display='none';
+        }
+        quxia1.onclick=function()
+        {
+            //点击注册
+            var nex2=document.getElementById('nex1');
+            // console.log(nex);
+            nex2.style.display='none';
+        }
+        quxia2.onclick=function()
+        {
+            //点击注册
+            var nex3=document.getElementById('nex2');
+            // console.log(nex);
+            nex3.style.display='none';
+        }
+        quxia3.onclick=function()
+        {
+            //点击注册
+            var nex4=document.getElementById('nex3');
+            // console.log(nex);
+            nex4.style.display='none';
+        }
+
+        // var buttipn=document.querySelector('button');
+        if(document.body.scrollWidth<768)
+        {
+            document.getElementById('butt').style.display='none';
+            document.getElementById('text_t').style.display='none';
+            // 如果小于768这个宽度点击将不起任何作用!禁止缩小浏览器之用法!
+        }
+        // 这里修改是浏览器的样式
+        var text_s=document.querySelector('#text_t');
+
+        text_s.onfocus=function()
+        {
+            if(this.value=="请输入您的查询请求")
+            {
+                //同时你搜索这句话也是不成立的!
+                this.value="";
+            }
+        }
+        // 鼠标有焦点
+        text_s.onblur = function(){
+			if(this.value == ""){
+			this.value = "请输入您的查询请求";
+		}
+	}
+    // 鼠标失去焦点
+    var ip_tem1=document.querySelector('#ip_tem');
+    var ip_tem2=document.getElementById('p');
+    var ip_tem3=document.getElementById('m_stext'); //input标签
+    
+    ip_tem1.onclick=function()
+       {
+        //当点击input就显示input标签
+        ip_tem3.style.display='block';
+        
+        if(Text.display!='none')
+        {
+            var mp=document.getElementById('m_stext').value;
+
+            
+            ip_tem2.innerText=mp;
+
+            if(ip_tem2.innerText!=''||mp.length<=5)
+            {
+                alert('修改成功!');
+                ip_tem2.innerText=mp;
+            }
+            else
+            {
+                if(ip_tem3.style.display!='none')
+                {
+                    ip_tem2.innerText='一页春秋';
+                    // 如果修改失败,就不给继续修改!
+                }
+            }
+        }
+        else
+        {
+            alert('操作失败!');
+        }
+      }
+    </script>
+</body>
+</html>
